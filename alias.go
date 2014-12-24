@@ -105,7 +105,7 @@ func (s *AliasService) Do() (*AliasResult, error) {
 		if action.Filter != nil {
 			detailsJson["filter"] = (*action.Filter).Source()
 		}
-		if action.Routing != nil {
+		if action.Routing != "" {
 			detailsJson["routing"] = action.Routing
 		}
 		actionJson[action.Type] = detailsJson
